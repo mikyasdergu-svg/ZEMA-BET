@@ -1,0 +1,37 @@
+/* 1. Make the Sidebar Logo Circular */
+.fi-logo img, 
+.fi-sidebar-header img {
+    border-radius: 50% !important;
+    border: 2px solid #b45309 !important;
+    object-fit: cover !important;
+}
+
+/* 2. Apply Background to the Admin Area */
+.fi-main {
+    background-image: url('/images/begena-page.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    position: relative;
+}
+
+/* 3. Dark Overlay for readability */
+.fi-main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(12, 10, 9, 0.88); 
+    z-index: 0;
+}
+
+/* 4. Ensure content stays above the overlay */
+.fi-main-ctn {
+    position: relative;
+    z-index: 1;
+}
+
+/* 5. Ethiopian Tibeb Border on the top bar */
+.fi-topbar {
+    border-top: 5px solid;
+    border-image: repeating-linear-gradient(45deg, #009b3a, #009b3a 15px, #fed100 15px, #fed100 30px, #ef1c24 30px, #ef1c24 45px) 1;
+}

@@ -1,0 +1,34 @@
+/* This ONLY styles the logo and the background without breaking the layout */
+
+/* 1. Make logos circular */
+.fi-logo img, 
+.fi-sidebar-header img, 
+.fi-avatar {
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 2px solid #b45309 !important;
+    max-height: 50px !important; /* Prevents the "Giant Icon" issue */
+}
+
+/* 2. Fix the background safely */
+.fi-main {
+    background-image: url('/images/begena-page.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #1c1917; /* Fallback color */
+}
+
+/* 3. Ensure the content area is readable */
+.fi-main-ctn {
+    background: rgba(255, 255, 255, 0.95);
+    margin: 2rem;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* 4. Fix massive icons in case they leak */
+svg {
+    max-width: 100%;
+}
